@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
-import Navbar from "./components/Navbar/Navbar";
+import NavBar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
 import routes from "./routes";
 //Pipcorn
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar />
+          <NavBar {...this.state} />
           {routes}
           <Footer />
         </div>
