@@ -1,3 +1,48 @@
 @import "../../../Sass/__variables";
 @import "../../../Sass/__mixins";
 //css
+.big {
+  height: 9vh;
+}
+.small {
+  height: 6vh;
+}
+.navBar {
+  transition: height 0.3s;
+  position: fixed;
+  top: 0;
+  @include flex(space-between, center, row);
+
+  width: 100vw;
+  background: $midGrey;
+  &__companyName {
+    h1 {
+      color: $black;
+      padding-left: 100px;
+    }
+  }
+  &__headings {
+    padding-right: 30px;
+    width: 40%;
+    @include flex(space-around, center, row);
+    font-size: 17px;
+    font-weight: 500;
+    height: 100%;
+
+    .activeNav {
+      padding-bottom: 3px;
+      color: $black;
+      border-bottom: 3px solid $black;
+      //   border-bottom: 7px;
+    }
+    .inactiveNav {
+      padding-bottom: 6px;
+      color: $lightBlack;
+    }
+  }
+}
+@media (max-width: "1050px") {
+  .navBar__headings {
+    width: 60%;
+  }
+}

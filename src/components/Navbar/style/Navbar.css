@@ -1,0 +1,42 @@
+.big {
+  height: 9vh; }
+
+.small {
+  height: 6vh; }
+
+.navBar {
+  transition: height 0.3s;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  background: #ceccce; }
+  .navBar__companyName h1 {
+    color: #222022;
+    padding-left: 100px; }
+  .navBar__headings {
+    padding-right: 30px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 17px;
+    font-weight: 500;
+    height: 100%; }
+    .navBar__headings .activeNav {
+      padding-bottom: 3px;
+      color: #222022;
+      border-bottom: 3px solid #222022; }
+    .navBar__headings .inactiveNav {
+      padding-bottom: 6px;
+      color: #22202285; }
+
+@media (max-width: 1050px) {
+  .navBar__headings {
+    width: 60%; } }
