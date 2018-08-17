@@ -8,7 +8,7 @@ class Navbar extends React.Component {
     super();
     this.state = {
       yAxis: 0,
-      openNav: false
+      activeBurger: false
     };
   }
   componentDidMount() {
@@ -23,6 +23,7 @@ class Navbar extends React.Component {
   //   }
   // }
   render() {
+    let { activeBurger } = this.state;
     let navBar = this.props.nav.map(e => {
       return (
         <Link to={e.to} key={e.to}>
@@ -44,16 +45,40 @@ class Navbar extends React.Component {
     return (
       <header className={this.state.yAxis < 40 ? "navBar big" : "navBar small"}>
         <div className="navBar__companyName">
+          <div
+            className="burger"
+            id="burger"
+            onClick={() =>
+              this.setState({ activeBurger: !this.state.activeBurger })
+            }
+          >
+            <div
+              className={
+                activeBurger
+                  ? "burger__top burger__top__animated"
+                  : "burger__top"
+              }
+            />
+            <div
+              className={
+                activeBurger
+                  ? "burger__middle burger__middle__animated"
+                  : "burger__middle"
+              }
+            />
+            <div
+              className={
+                activeBurger
+                  ? "burger__bottom burger__bottom__animated"
+                  : "burger__bottom"
+              }
+            />
+          </div>
           <Link to="/">
             <h1>TEMPLATE</h1>
           </Link>
         </div>
         <section className="navBar__headings">{navBar}</section>
-        <section classname="burger-set">
-          <div className="burger top" />
-          <div className="burger middle" />
-          <div className="burger bottom" />
-        </section>
       </header>
     );
   }

@@ -41,8 +41,63 @@
     }
   }
 }
+#burger {
+  display: none;
+}
+.burger {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  @include flex(space-around, center, center); //   background: black;
+  &__top,
+  &__middle,
+  &__bottom {
+    width: 100%;
+    height: 10px;
+    background: black;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  &__top {
+    &__animated {
+      transform: translate(0, 165%) rotate(-47deg);
+    }
+  }
+  &__middle {
+    &__animated {
+      transform: translate(-100%, 0);
+    }
+  }
+  &__bottom {
+    &__animated {
+      transform: translate(0, -175%) rotate(45deg);
+    }
+  }
+}
 @media (max-width: "1050px") {
   .navBar__headings {
     width: 60%;
+  }
+}
+@media (max-width: "950px") {
+  #burger {
+    display: inline-flex;
+  }
+  .navBar {
+    &__companyName {
+      //   @include flex(space-between, center, center);
+      width: 100%;
+      h1 {
+        padding-left: 0px;
+        text-align: center;
+      }
+    }
+    &__headings {
+      width: 320px;
+      height: 100vh;
+      position: absolute;
+      flex-direction: column;
+      left: -320px;
+    }
   }
 }
