@@ -7,6 +7,7 @@ export default (
   <Switch>
     <Route path="/contact" component={Contact} />
     <Route path="/about" component={() => <h1>About Page</h1>} />
+    <Route path="/display" component={() => <h1>My Display</h1>} />
     <Route path="/" component={Home} />
   </Switch>
 );

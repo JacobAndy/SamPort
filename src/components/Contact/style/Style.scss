@@ -9,11 +9,26 @@
   height: 100vh;
   @include flex(space-around, center, column);
   &__pre {
+    &__emailsent {
+      animation: emailsent 0.5s ease-in both;
+    }
+
     padding: 30px;
     border: 1px solid rgba(17, 17, 17, 0.5);
     background: rgba(102, 102, 102, 0.589);
     border-radius: 10px;
-    form {
+    .email {
+      margin-bottom: 20px;
+      @include flex(space-between, center, column);
+      input {
+        width: 320px;
+        background: whitesmoke;
+        height: 40px;
+        font-size: 20px;
+      }
+      &__body {
+        resize: none;
+      }
       height: 250px;
       .flexed {
         @include flex(space-around, flex-start, column);
@@ -48,18 +63,16 @@
       text-align: center;
     }
   }
-  .email {
-    margin-bottom: 20px;
-    @include flex(space-between, center, column);
-    input {
-      width: 320px;
-      background: whitesmoke;
-      height: 40px;
-      font-size: 20px;
-    }
-    &__body {
-      resize: none;
-    }
+}
+@keyframes emailsent {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(-1500px);
   }
 }
 

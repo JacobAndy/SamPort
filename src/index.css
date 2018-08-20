@@ -125,3 +125,9 @@ table {
 a {
   text-decoration: none;
 }
+a:active,
+a:visited,
+a:hover,
+a:link {
+  color: black;
+}

@@ -8,6 +8,7 @@ class App extends Component {
   state = {
     nav: [
       { nav: "HOME", to: "/" },
+      { nav: "MY WORK", to: "/display" },
       { nav: "FIND ME", to: "/contact" },
       { nav: "ABOUT ME", to: "/about" }
     ]
