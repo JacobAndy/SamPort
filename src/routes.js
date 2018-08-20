@@ -1,10 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-{
-  /*
-    unfinished routes, place holders for components
-    */
-}
+
 export default (
   <Switch>
     {/*
