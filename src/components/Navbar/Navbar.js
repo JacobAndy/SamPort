@@ -6,24 +6,10 @@ import { withRouter } from "react-router-dom";
 class Navbar extends React.Component {
   constructor() {
     super();
-    this.state = {
-      yAxis: 0,
-      activeBurger: false
-    };
+    this.state = {};
   }
-  componentDidMount() {
-    // console.log("Y offset", window.pageYOffset);
-    window.addEventListener("scroll", e => {
-      this.setState({ yAxis: window.pageYOffset });
-    });
-  }
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (this.state.yAxis !== prevState.yAxis) {
-  //     console.log("difference");
-  //   }
-  // }
+
   render() {
-    let { activeBurger } = this.state;
     let navBar = this.props.nav.map(e => {
       return (
         <Link to={e.to} key={e.to}>
@@ -43,39 +29,10 @@ class Navbar extends React.Component {
       );
     });
     return (
-      <header className={this.state.yAxis < 40 ? "navBar big" : "navBar small"}>
+      <header className="navBar">
         <div className="navBar__companyName">
-          <div
-            className="burger"
-            id="burger"
-            onClick={() =>
-              this.setState({ activeBurger: !this.state.activeBurger })
-            }
-          >
-            <div
-              className={
-                activeBurger
-                  ? "burger__top burger__top__animated"
-                  : "burger__top"
-              }
-            />
-            <div
-              className={
-                activeBurger
-                  ? "burger__middle burger__middle__animated"
-                  : "burger__middle"
-              }
-            />
-            <div
-              className={
-                activeBurger
-                  ? "burger__bottom burger__bottom__animated"
-                  : "burger__bottom"
-              }
-            />
-          </div>
           <Link to="/">
-            <h1>TEMPLATE</h1>
+            <h1>SAM ANDERSON</h1>
           </Link>
         </div>
         <section className="navBar__headings">{navBar}</section>
