@@ -12,6 +12,9 @@
     width: 900px;
     font-family: sans-serif;
     @include flex(space-between, center, center);
+    h2 {
+      letter-spacing: 2px;
+    }
     h1 {
       width: 370px;
       //   white-space: nowrap;

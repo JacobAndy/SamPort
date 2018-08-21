@@ -79,18 +79,25 @@ class Contact extends React.Component {
               method="POST"
               action="https://formspree.io/odistiinct@gmail.com"
             >
+              <div className="flexed">
+                <label>Email:</label>
+                <input type="email" name="_replyto" required />
+              </div>
               <input
                 type="hidden"
                 name="_subject"
                 value="Contact request from personal website"
               />
-              <input
-                type="email"
-                name="_replyto"
-                placeholder="Your email"
-                required
-              />
-              <textarea name="message" placeholder="Your message" required />
+              <div className="flexed flexed__mes">
+                <label>Message:</label>
+                <textarea
+                  name="message"
+                  rows="5"
+                  cols="33"
+                  className="email__body"
+                  required
+                />
+              </div>
               <button type="submit">Send</button>
             </form>
           </div>

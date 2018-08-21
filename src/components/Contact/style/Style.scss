@@ -32,6 +32,10 @@
       height: 250px;
       .flexed {
         @include flex(space-around, flex-start, column);
+        flex-wrap: nowrap;
+        &__mes {
+          margin-top: 20px;
+        }
         label {
           padding-bottom: 6px;
         }
@@ -39,6 +43,20 @@
       textarea {
         font-size: 20px;
         padding: 7px;
+      }
+      form {
+        @include flex(center, center, column);
+        flex-wrap: nowrap;
+        button {
+          margin-top: 15px;
+          width: 90px;
+          height: 50px;
+          font-family: sans-serif;
+          background: whitesmoke;
+          border-radius: 10px;
+          font-size: 18px;
+          border: 1px solid #222;
+        }
       }
     }
     .social-media-icons {
@@ -62,17 +80,6 @@
       font-size: 20px;
       text-align: center;
     }
-  }
-}
-@keyframes emailsent {
-  0% {
-    transform: translateY(0px);
-  }
-  25% {
-    transform: translateY(200px);
-  }
-  100% {
-    transform: translateY(-1500px);
   }
 }
 

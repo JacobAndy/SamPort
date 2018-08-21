@@ -17,5 +17,7 @@
     align-items: center;
     flex-direction: center;
     flex-wrap: wrap; }
+    .home .adjectives h2 {
+      letter-spacing: 2px; }
     .home .adjectives h1 {
       width: 370px; }
