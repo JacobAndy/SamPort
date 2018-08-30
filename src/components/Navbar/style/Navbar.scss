@@ -8,6 +8,9 @@
 
   width: 100vw;
   height: 100px;
+  &__arrow {
+    display: none;
+  }
   &__companyName {
     h1 {
       color: $black;
@@ -19,7 +22,7 @@
   }
   &__headings {
     padding-right: 30px;
-    width: 40%;
+    width: 550px;
     @include flex(space-around, center, row);
     font-size: 17px;
     font-weight: 500;
@@ -40,5 +43,97 @@
       padding-bottom: 6px;
       color: $lightBlack;
     }
+  }
+}
+@media (max-width: "1100px") {
+  .navBar {
+    // position: fixed;
+    @include flex(space-between, center, row);
+    // width: 100vw;
+    // height: 100px;
+    background: lightcyan;
+    &__arrow {
+      display: inline;
+      position: absolute;
+      right: 10px;
+      &__active {
+        animation: rotateNav 0.7s both;
+      }
+      &__static {
+        animation: regularNav 0.7s both;
+      }
+    }
+
+    &__companyName {
+      @include flex(center, center, row);
+      width: 100vw;
+
+      h1 {
+        // color: $black;
+        // letter-spacing: 3px;
+        // font-size: 20px;
+        // font-family: sans-serif;
+        padding-left: 0px;
+      }
+    }
+    &__headings {
+      position: absolute;
+      top: -100px;
+      width: 100%;
+      // padding-right: 30px;
+      // width: 550px;
+
+      //*******
+      // @include flex(space-around, center, column);
+      // height: 600px;
+      //*******
+
+      // font-size: 17px;
+      // font-weight: 500;
+      // height: 100%;
+      &__active {
+        top: 100px;
+        width: 100%;
+      }
+      &__sections {
+        height: 40px;
+        width: 100%;
+        @include flex(center, center, row);
+        &:hover {
+          h2 {
+            color: blue;
+          }
+        }
+        h2 {
+          // font-family: sans-serif;
+          // letter-spacing: 1px;
+        }
+      }
+      .activeNav {
+        // padding-bottom: 3px;
+        // color: $black;
+        // border-bottom: 3px solid $black;
+      }
+      .inactiveNav {
+        // padding-bottom: 6px;
+        // color: $lightBlack;
+      }
+    }
+  }
+}
+@keyframes rotateNav {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(540deg);
+  }
+}
+@keyframes regularNav {
+  from {
+    transform: rotate(540deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
