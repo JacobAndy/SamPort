@@ -35,7 +35,7 @@ class Navbar extends React.Component {
       <header className="navBar">
         <div className="navBar__companyName">
           <Link to="/">
-            <h1>SAM ANDERSON</h1>
+            <h1>Gannon Gager</h1>
           </Link>
         </div>
         <i

@@ -67,6 +67,8 @@
       top: -100px;
       width: 100%; }
       .navBar__headings__active {
+        animation: sectionsSlideDown 1s;
+        position: absolute;
         top: 100px;
         width: 100%; }
       .navBar__headings__sections {
@@ -91,3 +93,9 @@
     transform: rotate(540deg); }
   to {
     transform: rotate(0deg); } }
+
+@keyframes sectionsSlideDown {
+  from {
+    top: -100px; }
+  to {
+    top: 100px; } }

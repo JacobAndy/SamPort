@@ -36,6 +36,9 @@
         flex-wrap: wrap;
         width: 55px;
         flex-wrap: nowrap; }
+      .picture-frame .individual_image__hover h4 {
+        font-family: sans-serif;
+        font-size: 18px; }
       .picture-frame .individual_image__hover h4,
       .picture-frame .individual_image__hover i {
         color: whitesmoke; }

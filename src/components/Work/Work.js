@@ -8,11 +8,11 @@ class Work extends Component {
   };
   componentDidMount() {
     axios
-      .get(
-        `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
-          process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
-        }`
-      )
+      .get
+      // `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
+      //   process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
+      // }`
+      ()
       .then(instagram =>
         //  console.log(instagram.data.data)
         this.setState({ feed: instagram.data.data })
