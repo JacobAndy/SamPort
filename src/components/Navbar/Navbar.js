@@ -16,7 +16,13 @@ class Navbar extends React.Component {
     let navBar = this.props.nav.map(e => {
       return (
         <Link to={e.to} key={e.to}>
-          <div className="navBar__headings__sections">
+          <div
+            className="navBar__headings__sections"
+            onClick={() => {
+              if (typeof burger === "string") return;
+              else return this.setState({ burger: false });
+            }}
+          >
             <h2
               className={
                 this.props.location.pathname === e.to
@@ -33,7 +39,7 @@ class Navbar extends React.Component {
     });
     return (
       <header className="navBar">
-        <div className="navBar__companyName">
+        <div className="navBar__companyName" id="company-name">
           <Link to="/">
             <h1>Gannon Gager</h1>
           </Link>
@@ -51,9 +57,20 @@ class Navbar extends React.Component {
         />
 
         <section
-          className={burger ? "navBar__headings__active" : "navBar__headings"}
+          className={
+            typeof burger === "string"
+              ? "navBar__headings"
+              : burger
+                ? "navBar__headings__active"
+                : "navBar__headings__inactive"
+          }
         >
           {navBar}
+          <div className="navBar__social-icons">
+            <i className="fa fa-facebook-f" />
+            <i className="fa fa-instagram" />
+            <i className="fa fa-twitter" />
+          </div>
         </section>
       </header>
     );

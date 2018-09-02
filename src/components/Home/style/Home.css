@@ -19,6 +19,8 @@
     flex-direction: center;
     flex-wrap: wrap; }
     .home .adjectives h2 {
-      letter-spacing: 2px; }
+      color: #333;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 9px white; }
     .home .adjectives h1 {
       width: 370px; }

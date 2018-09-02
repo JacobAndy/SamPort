@@ -14,7 +14,9 @@
     font-family: sans-serif;
     @include flex(space-between, center, center);
     h2 {
+      color: #333;
       letter-spacing: 2px;
+      text-shadow: 2px 2px 9px rgba(255, 255, 255, 1);
     }
     h1 {
       width: 370px;
