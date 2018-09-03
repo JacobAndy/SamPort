@@ -1,0 +1,22 @@
+.contact {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  .contact__contact h4 {
+    font-family: sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 20px 4px 20px 4px;
+    width: 250px;
+    height: 50px;
+    border: 2px solid blue;
+    background: lightblue; }

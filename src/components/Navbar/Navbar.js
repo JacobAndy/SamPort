@@ -67,9 +67,18 @@ class Navbar extends React.Component {
         >
           {navBar}
           <div className="navBar__social-icons">
-            <i className="fa fa-facebook-f" />
-            <i className="fa fa-instagram" />
-            <i className="fa fa-twitter" />
+            <a href="https://www.facebook.com/ggager?fb_dtsg_ag=AdxaA79TLyrRWwj4CUe6NofLcq4Mu9MQuYFwGg6a67X0pA%3AAdwmyQ1mjP3ciG6o8Jt6qrkiJ1uU1chGbmnG4W069DtNXQ">
+              <i className="fa fa-facebook-f" />
+            </a>
+            <a href="https://www.instagram.com/gannon_and_the_canon/">
+              <i className="fa fa-instagram" />
+            </a>
+            <a>
+              <i className="fa fa-twitter" />
+            </a>
+            <a>
+              <i className="fa fa-pinterest-p" />
+            </a>
           </div>
         </section>
       </header>
