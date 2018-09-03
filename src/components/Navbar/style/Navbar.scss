@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100px;
   &__social-icons {
-    width: 80px;
+    width: 100px;
     @include flex(space-between, center, row);
     padding-bottom: 5px;
     i {
