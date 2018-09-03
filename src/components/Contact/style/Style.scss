@@ -28,6 +28,7 @@
     }
   }
   &__contact {
+    margin: 0 20px;
     @include flex(space-around, flex-start, column);
     h4 {
       font-weight: 600;
@@ -62,6 +63,19 @@
       width: 120px;
       height: 40px;
       margin: auto;
+    }
+  }
+}
+@media (max-width: "610px") {
+  .contact {
+    &__contact {
+      margin-top: 150px;
+    }
+    &__specific {
+      margin-top: 50px;
+      &__ea {
+        width: 290px;
+      }
     }
   }
 }

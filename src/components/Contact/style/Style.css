@@ -31,6 +31,7 @@
       .contact__specific__ea h5 {
         color: blue; }
   .contact__contact {
+    margin: 0 20px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -69,3 +70,11 @@
       width: 120px;
       height: 40px;
       margin: auto; }
+
+@media (max-width: 610px) {
+  .contact__contact {
+    margin-top: 150px; }
+  .contact__specific {
+    margin-top: 50px; }
+    .contact__specific__ea {
+      width: 290px; } }

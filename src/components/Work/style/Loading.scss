@@ -1,0 +1,48 @@
+@import "../../../Sass/__mixins.scss";
+@import "../../../Sass/__variables.scss";
+.loading {
+  margin: auto;
+  width: 320px;
+  height: 85vh;
+  @include flex(space-around, center, row);
+  section {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      border: 1px solid white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      animation: loadingDots 0.8s;
+      animation-iteration-count: infinite;
+    }
+    &:nth-child(1) {
+      background: blue;
+    }
+    &:nth-child(2) {
+      background: red;
+      animation-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      background: yellow;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(4) {
+      background: green;
+      animation-delay: 0.3s;
+    }
+  }
+}
+@keyframes loadingDots {
+  0% {
+    margin-bottom: 0;
+  }
+  50% {
+    margin-bottom: 100px;
+  }
+  100% {
+    margin-bottom: 0px;
+  }
+}
