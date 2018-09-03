@@ -3,7 +3,9 @@ import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router } from "react-router-dom";
 import routes from "./routes";
-//Pipcorn
+import ThemeContext from "./Theme";
+import axios from "axios";
+
 class App extends Component {
   state = {
     nav: [
@@ -11,16 +13,37 @@ class App extends Component {
       { nav: "MY WORK", to: "/display" },
       { nav: "FIND ME", to: "/contact" },
       { nav: "ABOUT ME", to: "/about" }
-    ]
+    ],
+    feed: []
   };
+  componentDidMount() {
+    console.log("COMPONENT DID MOUNT HIT");
+    axios
+      .get(
+        `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
+          process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
+        }`
+      )
+
+      .then(instagram =>
+        this.setState({
+          feed: instagram.data.data
+        })
+      )
+      .catch(console.log);
+  }
   render() {
+    let { feed } = this.state;
+    console.log(feed);
     return (
-      <Router>
-        <div onScroll={e => console.log("hello")}>
-          <NavBar {...this.state} />
-          {routes}
-        </div>
-      </Router>
+      <ThemeContext.Provider value={feed}>
+        <Router>
+          <div onScroll={e => console.log("hello")}>
+            <NavBar {...this.state} />
+            {routes}
+          </div>
+        </Router>
+      </ThemeContext.Provider>
     );
   }
 }

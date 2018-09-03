@@ -1,67 +1,34 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./style/Work.css";
-import axios from "axios";
+// import axios from "axios";
 import Loading from "./Loading";
+import ThemeContext from "../../Theme";
+import MappedImage from "./MappedImage";
+import { withRouter } from "react-router-dom";
+
 class Work extends Component {
-  state = {
-    feed: []
-  };
   componentDidMount() {
-    //context api so this doesnt fire every time someone reloads the page
-    //to prevent to many calls to instagram api
-    //make home page mobile responsive
-    //add more to find me, about me
-    //clean up home page landing for more intro
-    // axios
-    //   .get
-    //   `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
-    //     process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
-    //   }`
-    //   ()
-    //   .then(instagram =>
-    //     //  console.log(instagram.data.data)
-    //     this.setState({
-    //       feed: instagram.data.data
-    //     })
-    //   )
-    //   .catch(console.log);
+    console.log(this.props.value);
   }
   render() {
-    let { feed } = this.state;
-    let iteratedFeed = feed.map((image, index) => {
-      let display = setTimeout(() => (display = "flex"), index * 100);
-
-      return (
-        <a href={image.link}>
-          <div
-            key={image.id}
-            className="individual_image"
-            style={{
-              backgroundImage: `url(${image.images.low_resolution.url})`,
-              display: "flex"
-            }}
-          >
-            {/* Check for carousel_media */}
-            <div className="individual_image__hover">
-              <div className="individual_image__hover__likes">
-                <i className="fa fa-heart fa-2x" />
-                <h4>{image.likes.count}</h4>
-              </div>
-
-              <div className="individual_image__hover__comments">
-                <i class="fa fa-comment fa-2x" />
-                <h4>{image.comments.count}</h4>
-              </div>
-            </div>
-          </div>
-        </a>
-      );
-    });
+    console.log(this.props);
+    let { value, location } = this.props;
+    let { search } = location;
+    let iteratedFeed = value.map((image, index) => (
+      <MappedImage key={image.id} image={image} />
+    ));
     return (
       <div className="picture-frame">
-        {feed.length === 0 ? <Loading /> : iteratedFeed}
+        {value.length === 0 ? <Loading /> : iteratedFeed}
       </div>
     );
   }
 }
-export default Work;
+const NewWork = withRouter(Work);
+const WrappedWork = () => (
+  <ThemeContext.Consumer>
+    {val => <NewWork value={val} />}
+  </ThemeContext.Consumer>
+);
+
+export default WrappedWork;
