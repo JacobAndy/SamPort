@@ -8,7 +8,10 @@
 
 # production
 /build
-/src/*.css
+
+.sass-cache*
+*.map
+.css.map
 
 # misc
 .env
