@@ -10,10 +10,13 @@
     width: 900px;
     height: 610px;
     background: #9999;
-
+    position: relative;
     section {
       //this section contains the actual image
       &:nth-child(1) {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         img {
           width: 600px;
           height: 600px;
@@ -26,18 +29,35 @@
         min-width: 280px;
         height: 100%;
         @include flex(space-around, center, column);
+        //h2 = caption
         h2 {
           line-height: 29px;
           letter-spacing: 1px;
         }
+        //div = everything besides the caption
         div {
-          h4 {
+          section {
+            //the instagram comments
             &:nth-child(1) {
+              //icon
+              i {
+              }
+              //number
+              h4 {
+              }
             }
+            //the instagram likes
             &:nth-child(2) {
+              //icon
+              i {
+              }
+              //number
+              h4 {
+              }
             }
-            &:nth-child(3) {
-            }
+          }
+          //the date
+          h4 {
           }
         }
       }
