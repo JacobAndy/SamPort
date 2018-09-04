@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 import "./style/ImageFocused.css";
 
-function ImageFocused({ image }) {
-  console.log(image);
-  //check for image.carousel_media
-  return (
-    <div className="image-focused">
-      <section>
-        <img src="" />
-      </section>
-      <section>comments</section>
-    </div>
-  );
+class ImageFocused extends Component {
+  state = {};
+
+  render() {
+    return (
+      <div className="image">
+        <div className="image__focused">
+          <section />
+          <section>comments</section>
+        </div>
+      </div>
+    );
+  }
 }
 export default ImageFocused;
