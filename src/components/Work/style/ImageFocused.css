@@ -7,9 +7,26 @@
   flex-direction: row;
   flex-wrap: wrap; }
   .image__focused {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 900px;
-    height: 500px;
+    height: 610px;
     background: #9999; }
     .image__focused section:nth-child(1) img {
       width: 600px;
       height: 600px; }
+    .image__focused section:nth-child(2) {
+      width: 30%;
+      min-width: 280px;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap; }
+      .image__focused section:nth-child(2) h2 {
+        line-height: 29px;
+        letter-spacing: 1px; }

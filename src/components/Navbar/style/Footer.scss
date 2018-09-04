@@ -1,0 +1,13 @@
+@import "../../../Sass/__mixins";
+.footer {
+  width: 100%;
+  @include flex(center, center, row);
+  background: rgba(116, 115, 115, 0.199);
+  height: 30px;
+  h4 {
+    font-weight: 100;
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+  }
+}

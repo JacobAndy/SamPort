@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import NavBar from "./components/Navbar/Navbar";
+import Footer from "./components/Navbar/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import routes from "./routes";
 import ThemeContext from "./Theme";
@@ -32,6 +33,7 @@ class App extends Component {
       )
       .catch(console.log);
   }
+
   render() {
     let { feed } = this.state;
     console.log(feed);
@@ -41,6 +43,7 @@ class App extends Component {
           <div onScroll={e => console.log("hello")}>
             <NavBar {...this.state} />
             {routes}
+            <Footer />
           </div>
         </Router>
       </ThemeContext.Provider>
