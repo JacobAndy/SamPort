@@ -6,6 +6,25 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="contact">
+        <div className="contact__why">
+          <h2>CONTACT ME</h2>
+          <section>
+            <h4>Social Media</h4>
+            <ul>
+              <li>test 1</li>
+              <li>test 2</li>
+              <li>test 3</li>
+            </ul>
+          </section>
+          <section>
+            <h4>Business Needs</h4>
+            <ul>
+              <li>test 1</li>
+              <li>test 2</li>
+              <li>test 3</li>
+            </ul>
+          </section>
+        </div>
         <form
           action="https://formspree.io/example@gmail.com"
           method="POST"

@@ -59,7 +59,7 @@
   #company-name {
     width: 100%;
     height: 100%;
-    background: blue;
+    background: #2979ff;
     z-index: 2;
   }
   .navBar {
@@ -89,28 +89,15 @@
       width: 100vw;
 
       h1 {
-        // color: $black;
-        // letter-spacing: 3px;
-        // font-size: 20px;
-        // font-family: sans-serif;
         padding-left: 0px;
+        text-shadow: 1px 1px 6px #5392ff;
+        color: #133570;
       }
     }
     &__headings {
       position: absolute;
       top: -100px;
       width: 100%;
-      // padding-right: 30px;
-      // width: 550px;
-
-      //*******
-      // @include flex(space-around, center, column);
-      // height: 600px;
-      //*******
-
-      // font-size: 17px;
-      // font-weight: 500;
-      // height: 100%;
       &__active {
         animation: sectionsSlideDown 0.7s;
         position: absolute;
@@ -129,26 +116,32 @@
       &__sections {
         height: 90px;
         width: 100%;
-        background: #333;
+        background: #1c54b2;
+        position: relative;
+        &::after {
+          content: "";
+          border-bottom: 2px dotted #222;
+          width: 50px;
+          display: block;
+          position: absolute;
+          bottom: 15px;
+        }
         @include flex(center, center, row);
         &:hover {
+          &::after {
+            border-bottom: 2px solid #5392ff;
+          }
           h2 {
-            color: blue;
+            color: #5392ff;
           }
         }
         h2 {
-          // font-family: sans-serif;
-          // letter-spacing: 1px;
+          color: #222;
         }
       }
       .activeNav {
-        // padding-bottom: 3px;
-        // color: $black;
-        // border-bottom: 3px solid $black;
       }
       .inactiveNav {
-        // padding-bottom: 6px;
-        // color: $lightBlack;
       }
     }
     i {

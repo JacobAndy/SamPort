@@ -41,7 +41,14 @@ class Navbar extends React.Component {
       <header className="navBar">
         <div className="navBar__companyName" id="company-name">
           <Link to="/">
-            <h1>Gannon Gager</h1>
+            <h1
+              onClick={() => {
+                if (typeof burger === "string") return;
+                else return this.setState({ burger: false });
+              }}
+            >
+              Gannon Gager
+            </h1>
           </Link>
         </div>
         <i

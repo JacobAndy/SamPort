@@ -20,11 +20,11 @@ class App extends Component {
   componentDidMount() {
     console.log("COMPONENT DID MOUNT HIT");
     axios
-      .get(
-        `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
-          process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
-        }`
-      )
+      .get
+      // `https://api.instagram.com/v1/users/self/media/recent/?access_token=${
+      //   process.env.REACT_APP_INSTAGRAM_CONNECTION_KEY
+      // }`
+      ()
 
       .then(instagram =>
         this.setState({
