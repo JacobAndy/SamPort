@@ -7,22 +7,44 @@ class Contact extends React.Component {
     return (
       <div className="contact">
         <div className="contact__why">
-          <h2>CONTACT ME</h2>
+          {/* <h2>FIND ME</h2> */}
           <section>
-            <h4>Social Media</h4>
-            <ul>
-              <li>test 1</li>
-              <li>test 2</li>
-              <li>test 3</li>
-            </ul>
+            <h4>
+              <span style={{ borderBottom: "2px solid #1c54b2" }}>
+                Social Media
+              </span>{" "}
+              ?
+            </h4>
+            <p>
+              Keep up with me on social media accounts, I post everything from
+              professional pictures to my day to day!
+            </p>
           </section>
           <section>
-            <h4>Business Needs</h4>
-            <ul>
-              <li>test 1</li>
-              <li>test 2</li>
-              <li>test 3</li>
-            </ul>
+            <h4>
+              <span style={{ borderBottom: "2px solid #1c54b2" }}>
+                Business Needs
+              </span>{" "}
+              ?
+            </h4>
+            <p>
+              Need professional photography? or looking for future business
+              needs?
+              <br />
+              Feel free to contact me, or fill out the form!
+            </p>
+          </section>
+          <section>
+            <h4>
+              <span style={{ borderBottom: "2px solid #1c54b2" }}>
+                Get a quote
+              </span>
+              ?
+            </h4>
+            <p>
+              Prices vary depending on time, place, and your needs. <br />
+              Get in contact to discuss further!
+            </p>
           </section>
         </div>
         <form
@@ -71,6 +93,20 @@ class Contact extends React.Component {
           <div className="contact__specific__ea">
             <h5>PHONE</h5>
             <p>(404) 555-1234</p>
+          </div>
+          <div>
+            <a href="">
+              <i className="fa fa-facebook-f" />
+            </a>
+            <a href="">
+              <i className="fa fa-instagram" />
+            </a>
+            <a href="">
+              <i className="fa fa-twitter" />
+            </a>
+            <a href="">
+              <i className="fa fa-pinterest-p" />
+            </a>
           </div>
         </section>
       </div>
