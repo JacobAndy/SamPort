@@ -6,20 +6,24 @@
   @include flex(center, center, row);
 
   &__focused {
+    font-family: sans-serif;
     @include flex(space-around, center, row);
     width: 900px;
     height: 610px;
     background: #9999;
-    position: relative;
+    // position: relative;
     section {
       //this section contains the actual image
       &:nth-child(1) {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+        position: relative;
         img {
           width: 600px;
           height: 600px;
+        }
+        .arrow-slide-right {
+          position: absolute;
+          right: 0;
+          top: 0;
         }
       }
       //this section contains the likes,
@@ -28,7 +32,9 @@
         width: 30%;
         min-width: 280px;
         height: 100%;
-        @include flex(space-around, center, column);
+        @include flex(space-between, center, column);
+        padding: 20px 0px;
+        box-sizing: border-box;
         //h2 = caption
         h2 {
           line-height: 29px;
@@ -39,21 +45,11 @@
           section {
             //the instagram comments
             &:nth-child(1) {
-              //icon
-              i {
-              }
-              //number
-              h4 {
-              }
+              @include indmage();
             }
             //the instagram likes
             &:nth-child(2) {
-              //icon
-              i {
-              }
-              //number
-              h4 {
-              }
+              @include indmage();
             }
           }
           //the date

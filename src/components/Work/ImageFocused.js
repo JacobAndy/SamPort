@@ -53,6 +53,7 @@ class ImageFocused extends Component {
             {carousel_media &&
               imageCarousel !== 0 && (
                 <i
+                  className="arrow-slide-left"
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel - 1 })
                   }
@@ -63,6 +64,7 @@ class ImageFocused extends Component {
             {carousel_media &&
               (imageCarousel < image.length - 1 && (
                 <i
+                  className="arrow-slide-right"
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel + 1 })
                   }
@@ -82,6 +84,9 @@ class ImageFocused extends Component {
                 <i className="fa fa-heart" />
                 <h4>{likeCount}</h4>
               </section>
+              <a href={this.props.image.link}>
+                <i className="fa fa-link" />
+              </a>
 
               <h4>{this.getDate()}</h4>
             </div>

@@ -5,3 +5,15 @@
   flex-direction: $fd;
   flex-wrap: wrap;
 }
+
+@mixin indmage() {
+  // width: 50px;
+  @include flex(space-between, center, row);
+  //icon
+  i {
+    font-size: 30px;
+  }
+  //number
+  h4 {
+  }
+}
