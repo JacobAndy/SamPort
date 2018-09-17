@@ -14,22 +14,22 @@
     border-radius: 50%;
     animation: loadingDots 0.8s;
     animation-iteration-count: infinite; }
-  .loading section:nth-child(1) {
-    background: blue; }
+  .loading section:nth-child(1), .loading section:nth-child(2), .loading section:nth-child(3), .loading section:nth-child(4) {
+    background: #999; }
   .loading section:nth-child(2) {
-    background: red;
     animation-delay: 0.1s; }
   .loading section:nth-child(3) {
-    background: yellow;
     animation-delay: 0.2s; }
   .loading section:nth-child(4) {
-    background: green;
     animation-delay: 0.3s; }
 
 @keyframes loadingDots {
   0% {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    background: #999; }
   50% {
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    background: #222; }
   100% {
-    margin-bottom: 0px; } }
+    margin-bottom: 0px;
+    background: #999; } }

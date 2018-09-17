@@ -3,8 +3,9 @@ import "./style/Footer.css";
 
 function Footer() {
   return (
-    <div className="footer">
-      <h4>Designed and Developed by Jacob Anderson</h4>
+    <div>
+      {/* // <div className="footer">
+    //   <h4>Designed and Developed by Jacob Anderson</h4> */}
     </div>
   );
 }

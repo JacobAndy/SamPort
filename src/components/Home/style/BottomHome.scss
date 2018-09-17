@@ -6,6 +6,7 @@
   @include flex(space-around, center, row);
   section {
     @include flex(space-around, center, column);
+    margin: 15px 70px 0px 100px;
     .fontA {
       font-size: 70px;
       color: black;
@@ -17,6 +18,7 @@
       letter-spacing: 2px;
     }
     p {
+      width: 400px;
       text-align: center;
       box-sizing: border-box;
       padding-top: 5px;
@@ -33,6 +35,16 @@
     &:nth-child(2) {
     }
     &:nth-child(3) {
+    }
+  }
+}
+@media (max-width: "440px") {
+  .bottomHome {
+    section {
+      margin: 0;
+      p {
+        width: 300px;
+      }
     }
   }
 }

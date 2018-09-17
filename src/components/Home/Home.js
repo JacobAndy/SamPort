@@ -48,7 +48,7 @@ class Home extends React.Component {
             }}
           />
           <section
-            onClick={() => window.scroll({ top: 1000, behavior: "smooth" })}
+            onClick={() => window.scroll({ top: 910, behavior: "smooth" })}
           >
             <i className="fa fa-chevron-down" />
           </section>
