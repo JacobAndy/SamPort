@@ -1,12 +1,13 @@
 import React from "react";
 import "./style/Home.css";
+import BottomHome from "./BottomHome";
 
 const img1 =
   "https://images.pexels.com/photos/860538/pexels-photo-860538.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
 const img2 =
   "https://images.pexels.com/photos/927017/pexels-photo-927017.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
 const img3 =
-  "https://images.pexels.com/photos/1171545/pexels-photo-1171545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+  "https://images.pexels.com/photos/1002635/pexels-photo-1002635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
 
 const cycleImages = [img1, img2, img3];
 
@@ -32,15 +33,28 @@ class Home extends React.Component {
   render() {
     let { currentBackground } = this.state;
     return (
-      <div
-        className="home"
-        style={{ backgroundImage: `url(${cycleImages[currentBackground]})` }}
-      >
-        <section className="adjectives">
+      <div className="home">
+        <div
+          className="home__landing"
+          style={{
+            backgroundImage: `url(${cycleImages[currentBackground]})`
+          }}
+        >
+          <div className="home__landing__opacity" />
+          <div
+            className="home__landing__image-transition"
+            style={{
+              backgroundImage: `url(${cycleImages[currentBackground]})`
+            }}
+          />
+        </div>
+
+        {/* <section className="adjectives">
           <h2>CLEAN .</h2>
           <h2>PRECISE .</h2>
           <h2>PERFECT .</h2>
-        </section>
+        </section> */}
+        <BottomHome />
       </div>
     );
   }

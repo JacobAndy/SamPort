@@ -2,11 +2,35 @@
 @import "../../../Sass/__variables.scss";
 .home {
   width: 100%;
-  height: 100vh;
-  background-size: 100% 100%;
-  transition: background-image 1s ease-in-out;
-  @include flex(center, center, column);
+  // @include flex(center, center, column);
+  &__landing {
+    @include flex(center, center, column);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s ease-in;
 
+    height: 100vh;
+    &__opacity {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      background: #888;
+      z-index: 8;
+    }
+    &__image-transition {
+      z-index: 10;
+      width: 1260px;
+      height: 750px;
+      background-size: contain, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image 1s ease-in;
+    }
+  }
   .adjectives {
     font-weight: 900;
     font-size: 55px;

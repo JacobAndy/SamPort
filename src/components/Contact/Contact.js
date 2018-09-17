@@ -48,7 +48,7 @@ class Contact extends React.Component {
           </section>
         </div>
         <form
-          action="https://formspree.io/example@gmail.com"
+          action="https://formspree.io/odistiinct@gmail.com"
           method="POST"
           className="contact__contact"
         >

@@ -1,13 +1,33 @@
 .home {
-  width: 100%;
-  height: 100vh;
-  background-size: 100% 100%;
-  transition: background-image 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap; }
+  width: 100%; }
+  .home__landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 1s ease-in;
+    height: 100vh; }
+    .home__landing__opacity {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+      background: #888;
+      z-index: 8; }
+    .home__landing__image-transition {
+      z-index: 10;
+      width: 1260px;
+      height: 750px;
+      background-size: contain, cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-image 1s ease-in; }
   .home .adjectives {
     font-weight: 900;
     font-size: 55px;
