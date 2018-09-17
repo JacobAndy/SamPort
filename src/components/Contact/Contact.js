@@ -29,23 +29,21 @@ class Contact extends React.Component {
               </button>
             </form>
           </div>
-
-          <section className="contact__specific">
+          <div className="contact__details">
             <h3>CONTACT</h3>
-            <div className="contact__specific__ea">
-              <h5>EMAIL</h5>
-              <p>example@example.io</p>
-            </div>
-            <div className="contact__specific__ea">
-              <h5>PHONE</h5>
-              <p>(404) 555-1234</p>
-            </div>
-            <div>
-              <a href="">
-                <i className="fa fa-instagram" />
-              </a>
-            </div>
-          </section>
+            <section>
+              <i className="fa fa-envelope" />
+              <h4>example@email.io</h4>
+            </section>
+            <section>
+              <i className="fa fa-phone" />
+              <h4>(555) 404-5555</h4>
+            </section>
+            <section>
+              <i className="fa fa-instagram" />
+              <h4>instagram101</h4>
+            </section>
+          </div>
         </div>
       </div>
     );

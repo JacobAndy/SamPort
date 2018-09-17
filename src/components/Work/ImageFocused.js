@@ -49,41 +49,33 @@ class ImageFocused extends Component {
     return (
       <div className="image">
         <div className="image__focused">
-          <section>
+          <section style={{ backgroundImage: `url(${currentImage})` }}>
             {carousel_media &&
               imageCarousel !== 0 && (
                 <i
-                  className="arrow-slide-left"
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel - 1 })
                   }
-                  className="fa fa-arrow-circle-left"
+                  className="fa fa-chevron-left"
                 />
               )}
-            <img src={currentImage} />
+            {/* <img src={currentImage} /> */}
             {carousel_media &&
               (imageCarousel < image.length - 1 && (
                 <i
-                  className="arrow-slide-right"
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel + 1 })
                   }
-                  className="fa fa-arrow-circle-right"
+                  className="fa fa-chevron-right"
                 />
               ))}
           </section>
           <section>
             <h2>{caption}</h2>
             <div>
-              <section>
-                <i className="fa fa-comment" />
-                <h4>{commentCount}</h4>
-              </section>
+              <h4>Comments: {commentCount}</h4>
 
-              <section>
-                <i className="fa fa-heart" />
-                <h4>{likeCount}</h4>
-              </section>
+              <h4>Likes: {likeCount}</h4>
               <a href={this.props.image.link}>
                 <i className="fa fa-link" />
               </a>

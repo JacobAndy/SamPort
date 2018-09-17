@@ -1,19 +1,46 @@
 @import "../../../Sass/__mixins.scss";
 @import "../../../Sass/__variables.scss";
 .contact__holder__main {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   @include flex(center, center, row);
-  background: #777;
+  background: #999;
 }
 .contact {
-  // background: #888;
   width: 80%;
   height: 70vh;
   @include flex(space-around, center, row);
   &__subholder {
     height: 600px;
     @include flex(flex-start, center, column);
+  }
+  &__details {
+    height: 600px;
+    @include flex(flex-start, flex-start, column);
+    margin: 0 80px;
+
+    section {
+      width: 200px;
+      @include flex(flex-start, center, row);
+      margin-bottom: 20px;
+      text-align: center;
+      // margin: 0 80px;
+
+      i {
+        font-size: 26px;
+      }
+      h4 {
+        margin-left: 10px;
+
+        color: white;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+      }
+    }
   }
   h3 {
     color: white;
@@ -31,28 +58,8 @@
   }
   &__specific {
     height: 600px;
-    @include flex(flex-start, center, column);
-    &__ea {
-      @include flex(space-around, flex-start, column);
-      width: 210px;
-      height: 50px;
-      border-bottom: 1px solid black;
-      padding-bottom: 10px;
-      h5,
-      p {
-        font-family: sans-serif;
-      }
-      h5 {
-        letter-spacing: 1px;
-        font-size: 12px;
-        font-weight: 500;
-        color: white;
-      }
-      p {
-        letter-spacing: 1px;
-        color: white;
-      }
-    }
+    @include flex(flex-start, flex-start, column);
+    //
   }
   &__contact {
     margin: 0 20px;
@@ -95,6 +102,36 @@
       &:active {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
         outline: none;
+      }
+    }
+  }
+}
+
+@media (max-width: "1212px") {
+  .contact {
+    // box-sizing: border-box;
+    // padding-top: 20px;
+    // &__details {
+    //   height: 300px;
+    // }
+    &__holder {
+      &__main {
+        // align-items: flex-start;
+      }
+    }
+  }
+}
+
+@media (max-width: "978px") {
+  .contact {
+    box-sizing: border-box;
+    padding-top: 20px;
+    &__details {
+      height: 300px;
+    }
+    &__holder {
+      &__main {
+        align-items: flex-start;
       }
     }
   }

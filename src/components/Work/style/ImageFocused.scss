@@ -11,24 +11,35 @@
     width: 900px;
     height: 610px;
     background: #9999;
-    // position: relative;
+    position: absolute;
     section {
       //this section contains the actual image
+      position: absolute;
+
       &:nth-child(1) {
-        position: relative;
-        img {
-          width: 600px;
-          height: 600px;
-        }
-        .arrow-slide-right {
+        // position: relative;
+        left: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-image 0.2s ease-in;
+        width: 600px;
+        height: 600px;
+        .fa-chevron-right,
+        .fa-chevron-left {
           position: absolute;
+          top: 300px;
+        }
+        .fa-chevron-right {
           right: 0;
-          top: 0;
+        }
+        .fa-chevron-left {
         }
       }
       //this section contains the likes,
       //comments, date, caption
       &:nth-child(2) {
+        right: 0;
         width: 30%;
         min-width: 280px;
         height: 100%;
