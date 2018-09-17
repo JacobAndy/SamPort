@@ -47,13 +47,12 @@ class Home extends React.Component {
               backgroundImage: `url(${cycleImages[currentBackground]})`
             }}
           />
+          <section
+            onClick={() => window.scroll({ top: 1000, behavior: "smooth" })}
+          >
+            <i className="fa fa-chevron-down" />
+          </section>
         </div>
-
-        {/* <section className="adjectives">
-          <h2>CLEAN .</h2>
-          <h2>PRECISE .</h2>
-          <h2>PERFECT .</h2>
-        </section> */}
         <BottomHome />
       </div>
     );

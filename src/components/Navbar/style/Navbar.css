@@ -54,7 +54,7 @@
   #company-name {
     width: 100%;
     height: 100%;
-    background: #2979ff;
+    background: #444;
     z-index: 2; }
   .navBar {
     display: flex;
@@ -81,8 +81,8 @@
       width: 100vw; }
       .navBar__companyName h1 {
         padding-left: 0px;
-        text-shadow: 1px 1px 6px #5392ff;
-        color: #133570; }
+        text-shadow: 1px 1px 2px whitesmoke;
+        color: white; }
     .navBar__headings {
       position: absolute;
       top: -100px;
@@ -101,7 +101,7 @@
       .navBar__headings__sections {
         height: 90px;
         width: 100%;
-        background: #1c54b2;
+        background: #777;
         position: relative;
         display: flex;
         justify-content: center;
@@ -110,19 +110,20 @@
         flex-wrap: wrap; }
         .navBar__headings__sections::after {
           content: "";
-          border-bottom: 2px dotted #222;
+          border-bottom: 2px solid #222;
           width: 50px;
           display: block;
           position: absolute;
           bottom: 15px; }
         .navBar__headings__sections:hover::after {
-          border-bottom: 2px solid #5392ff; }
+          border-bottom: 2px solid #666; }
         .navBar__headings__sections:hover h2 {
-          color: #5392ff; }
+          color: whitesmoke; }
         .navBar__headings__sections h2 {
-          color: #222; }
+          color: whitesmoke; }
     .navBar i {
-      z-index: 3; } }
+      z-index: 3;
+      color: white; } }
 
 @keyframes rotateNav {
   from {

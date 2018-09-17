@@ -18,8 +18,16 @@
     border-radius: 3px; }
     .bottomHome section .fontA {
       font-size: 70px;
-      color: white;
-      text-shadow: 3px 4px 4px black; }
+      color: black;
+      text-shadow: 3px 4px 4px #777; }
+    .bottomHome section h3 {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 2px; }
     .bottomHome section p {
+      text-align: center;
+      box-sizing: border-box;
+      padding-top: 5px;
+      border-top: 2px solid black;
       font-size: 16px;
       line-height: 22px; }

@@ -3,9 +3,10 @@ import "./style/BottomHome.css";
 
 function BottomHome() {
   return (
-    <div className="bottomHome">
+    <div className="bottomHome" id="bottomHome">
       <section>
         <i className="fa fa-camera fontA" />
+        <h3>Photos</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -20,6 +21,7 @@ function BottomHome() {
       </section>
       <section>
         <i className="fa fa-image fontA" />
+        <h3>Pixels</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -34,6 +36,7 @@ function BottomHome() {
       </section>
       <section>
         <i className="fa fa-balance-scale fontA" />
+        <h3>Balance</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever

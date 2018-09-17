@@ -42,7 +42,7 @@ class App extends Component {
         <Router>
           <div onScroll={e => console.log("hello")}>
             <NavBar {...this.state} />
-            {routes}
+            <div className="routes">{routes}</div>
             <Footer />
           </div>
         </Router>
