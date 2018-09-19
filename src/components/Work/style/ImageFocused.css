@@ -1,3 +1,9 @@
+.nextImageButton {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid black; }
+
 .image {
   width: 100%;
   height: 100vh;
@@ -27,12 +33,27 @@
         transition: background-image 0.2s ease-in;
         width: 600px;
         height: 600px; }
-        .image__focused section:nth-child(1) .fa-chevron-right,
-        .image__focused section:nth-child(1) .fa-chevron-left {
+        .image__focused section:nth-child(1) .nextImageButton-right,
+        .image__focused section:nth-child(1) .nextImageButton-left {
+          background: rgba(245, 245, 245, 0.685);
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.329);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
           position: absolute;
           top: 300px; }
-        .image__focused section:nth-child(1) .fa-chevron-right {
-          right: 0; }
+          .image__focused section:nth-child(1) .nextImageButton-right i,
+          .image__focused section:nth-child(1) .nextImageButton-left i {
+            color: #444; }
+        .image__focused section:nth-child(1) .nextImageButton-right {
+          right: 5px; }
+        .image__focused section:nth-child(1) .nextImageButton-left {
+          left: 5px; }
       .image__focused section:nth-child(2) {
         right: 0;
         width: 30%;

@@ -17,7 +17,10 @@
     flex-wrap: wrap;
     padding-bottom: 5px; }
     .navBar__social-icons i {
-      font-size: 20px; }
+      font-size: 20px;
+      transition: color 0.5s; }
+      .navBar__social-icons i:hover {
+        color: white; }
   .navBar__arrow {
     display: none; }
   .navBar__companyName h1 {
@@ -41,7 +44,10 @@
     height: 100%; }
     .navBar__headings__sections h2 {
       font-family: sans-serif;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      transition: color 0.5s; }
+      .navBar__headings__sections h2:hover {
+        color: white; }
     .navBar__headings .activeNav {
       padding-bottom: 3px;
       color: #222022;

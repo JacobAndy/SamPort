@@ -52,22 +52,26 @@ class ImageFocused extends Component {
           <section style={{ backgroundImage: `url(${currentImage})` }}>
             {carousel_media &&
               imageCarousel !== 0 && (
-                <i
+                <div
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel - 1 })
                   }
-                  className="fa fa-chevron-left"
-                />
+                  className="nextImageButton-left"
+                >
+                  <i className="fa fa-chevron-left" />
+                </div>
               )}
             {/* <img src={currentImage} /> */}
             {carousel_media &&
               (imageCarousel < image.length - 1 && (
-                <i
+                <div
                   onClick={() =>
                     this.setState({ imageCarousel: imageCarousel + 1 })
                   }
-                  className="fa fa-chevron-right"
-                />
+                  className="nextImageButton-right"
+                >
+                  <i className="fa fa-chevron-right" />
+                </div>
               ))}
           </section>
           <section>

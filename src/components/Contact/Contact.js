@@ -41,7 +41,7 @@ class Contact extends React.Component {
             </section>
             <section>
               <i className="fa fa-instagram" />
-              <h4>instagram101</h4>
+              <h4>@gannon_gager</h4>
             </section>
           </div>
         </div>

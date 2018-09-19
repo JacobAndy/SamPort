@@ -8,7 +8,12 @@ import { withRouter } from "react-router-dom";
 
 class Work extends Component {
   componentDidMount() {
-    console.log(this.props.value);
+    if (window.scrollY !== 0) {
+      console.log("it is not 0");
+      // window.scroll({ top: 0, behavior: "smooth" });
+    } else {
+      console.log(window);
+    }
   }
   render() {
     console.log(this.props);
