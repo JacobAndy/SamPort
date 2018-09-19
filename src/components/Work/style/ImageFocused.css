@@ -21,11 +21,11 @@
     flex-wrap: wrap;
     width: 900px;
     height: 610px;
-    background: #9999;
     position: absolute; }
     .image__focused section {
       position: absolute; }
       .image__focused section:nth-child(1) {
+        border: 2px solid #777;
         left: 0;
         background-size: cover;
         background-repeat: no-repeat;
@@ -61,7 +61,7 @@
         height: 100%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         flex-wrap: wrap;
         padding: 20px 0px;
@@ -69,19 +69,20 @@
         .image__focused section:nth-child(2) h2 {
           line-height: 29px;
           letter-spacing: 1px; }
-        .image__focused section:nth-child(2) div section:nth-child(1) {
+        .image__focused section:nth-child(2) div {
+          height: 100px;
           display: flex;
           justify-content: space-between;
-          align-items: center;
-          flex-direction: row;
+          align-items: flex-start;
+          flex-direction: column;
           flex-wrap: wrap; }
-          .image__focused section:nth-child(2) div section:nth-child(1) i {
-            font-size: 30px; }
-        .image__focused section:nth-child(2) div section:nth-child(2) {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          flex-direction: row;
-          flex-wrap: wrap; }
-          .image__focused section:nth-child(2) div section:nth-child(2) i {
-            font-size: 30px; }
+          .image__focused section:nth-child(2) div h4 {
+            font-size: 17px;
+            font-weight: 600; }
+          .image__focused section:nth-child(2) div i {
+            font-size: 20px;
+            font-weight: 600; }
+
+@media (max-width: 1211px) {
+  .image__focused section {
+    position: absolute; } }

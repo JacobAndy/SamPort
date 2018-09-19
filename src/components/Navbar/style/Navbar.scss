@@ -45,9 +45,12 @@
       h2 {
         font-family: sans-serif;
         letter-spacing: 1px;
-        transition: color 0.5s;
+        transition: color 0.5s, border-color 0.5s;
+        // transition: border-color 0.5s;
+
         &:hover {
           color: white;
+          border-color: white;
         }
       }
     }
@@ -55,7 +58,8 @@
       padding-bottom: 3px;
       color: $black;
       border-bottom: 3px solid $black;
-      //   border-bottom: 7px;
+      transition: border-color 0.5s, color 0.5s;
+      // transition: color 0.5s;
     }
     .inactiveNav {
       padding-bottom: 6px;

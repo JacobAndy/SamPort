@@ -45,13 +45,15 @@
     .navBar__headings__sections h2 {
       font-family: sans-serif;
       letter-spacing: 1px;
-      transition: color 0.5s; }
+      transition: color 0.5s, border-color 0.5s; }
       .navBar__headings__sections h2:hover {
-        color: white; }
+        color: white;
+        border-color: white; }
     .navBar__headings .activeNav {
       padding-bottom: 3px;
       color: #222022;
-      border-bottom: 3px solid #222022; }
+      border-bottom: 3px solid #222022;
+      transition: border-color 0.5s, color 0.5s; }
     .navBar__headings .inactiveNav {
       padding-bottom: 6px;
       color: #22202285; }

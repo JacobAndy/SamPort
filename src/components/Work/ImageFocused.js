@@ -77,12 +77,12 @@ class ImageFocused extends Component {
           <section>
             <h2>{caption}</h2>
             <div>
-              <h4>Comments: {commentCount}</h4>
-
-              <h4>Likes: {likeCount}</h4>
               <a href={this.props.image.link}>
                 <i className="fa fa-link" />
               </a>
+              <h4>Comments: {commentCount}</h4>
+
+              <h4>Likes: {likeCount}</h4>
 
               <h4>{this.getDate()}</h4>
             </div>
