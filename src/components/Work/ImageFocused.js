@@ -49,7 +49,10 @@ class ImageFocused extends Component {
     return (
       <div className="image">
         <div className="image__focused">
-          <section style={{ backgroundImage: `url(${currentImage})` }}>
+          <section
+            onSwipe={e => console.log(e, "event")}
+            style={{ backgroundImage: `url(${currentImage})` }}
+          >
             {carousel_media &&
               imageCarousel !== 0 && (
                 <div

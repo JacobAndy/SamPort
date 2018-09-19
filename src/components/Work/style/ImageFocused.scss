@@ -94,14 +94,14 @@
     &__focused {
       // font-family: sans-serif;
       // @include flex(space-around, center, column);
-      // width: 900px;
+      width: auto;
       // height: 610px;
       // position: absolute;
-      margin-top: 350px;
-      height: auto;
-      flex-direction: column;
+      // margin-top: 350px;
+      // height: auto;
+      // flex-direction: column;
       section {
-        position: initial;
+        // position: initial;
 
         &:nth-child(1) {
           // border: 2px solid #777;
@@ -287,10 +287,10 @@
             width: 40px;
           }
           .nextImageButton-right {
-            right: 190px;
+            right: 80px;
           }
           .nextImageButton-left {
-            left: 190px;
+            left: 80px;
           }
         }
       }
@@ -311,10 +311,10 @@
           width: 40px;
         }
         .nextImageButton-right {
-          right: 250px;
+          right: 30px;
         }
         .nextImageButton-left {
-          left: 250px;
+          left: 30px;
         }
       }
     }
@@ -333,10 +333,10 @@
           width: 40px;
         }
         .nextImageButton-right {
-          right: 320px;
+          right: 20px;
         }
         .nextImageButton-left {
-          left: 320px;
+          left: 20px;
         }
       }
     }

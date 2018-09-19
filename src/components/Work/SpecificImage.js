@@ -9,9 +9,8 @@ class SpecificImage extends Component {
     targetIndex: { id: 0 }
   };
   componentDidMount() {
+    console.log(this.props);
     if (this.props.value.length === 0) {
-      //   //   console.log("Component Did Mount checks for 0 length");
-      //   console.log("component did mount", this.props.value);
       return;
     } else if (this.props.value.length !== 0) {
       let { value } = this.props;
@@ -22,11 +21,6 @@ class SpecificImage extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.props.value) {
-      //   console.log(
-      //     "component will receive props",
-      //     nextProps.value
-      //     // "Component will receive props checks to see if the new props matches the old"
-      //   );
       let { value } = nextProps;
       let { id } = this.props.match.params;
       let targetIndex = value[value.findIndex(image => image.id === id)];
@@ -35,8 +29,6 @@ class SpecificImage extends Component {
   }
 
   render() {
-    // console.log(this.props.match.params.id);
-    // console.log(this.props.value);
     let { value } = this.props;
     let { targetIndex } = this.state;
     return (
