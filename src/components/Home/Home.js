@@ -13,7 +13,8 @@ const cycleImages = [img1, img2, img3];
 
 class Home extends React.Component {
   state = {
-    currentBackground: 0
+    currentBackground: 0,
+    windowHeight: ""
   };
   componentDidMount() {
     this.interval = setInterval(
@@ -26,12 +27,14 @@ class Home extends React.Component {
         }),
       4000
     );
+    this.setState({ windowHeight: window.innerHeight });
   }
   componentWillUnmount() {
     clearInterval(this.interval);
   }
   render() {
-    let { currentBackground } = this.state;
+    console.log(window);
+    let { currentBackground, windowHeight } = this.state;
     return (
       <div className="home">
         <div
@@ -48,7 +51,9 @@ class Home extends React.Component {
             }}
           />
           <section
-            onClick={() => window.scroll({ top: 910, behavior: "smooth" })}
+            onClick={() =>
+              window.scroll({ top: windowHeight, behavior: "smooth" })
+            }
           >
             <i className="fa fa-chevron-down" />
           </section>
