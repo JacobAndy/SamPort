@@ -18,6 +18,9 @@
     width: 700px;
     height: 400px;
     margin: 0 15px; }
+    .about section h2 {
+      font-size: 25px;
+      font-weight: 700; }
     .about section h4 {
       line-height: 34px; }
 
